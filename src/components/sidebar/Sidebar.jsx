@@ -28,7 +28,12 @@ const Sidebar = () => {
         localStorage.removeItem("id_usuario");
         localStorage.removeItem("email");
         localStorage.removeItem("role");
-
+        localStorage.removeItem("nombre");
+        localStorage.removeItem("apellido");
+        localStorage.removeItem("direccion");
+        localStorage.removeItem("telefono");
+        localStorage.removeItem("Usuario"); 
+        localStorage.removeItem("token");
         // Redirigir al usuario a la página de login
         navigate("/");
     };
