@@ -25,7 +25,7 @@ const Lmod = () => {
       if (response.ok) {
         const data = await response.json();
 
-        // Guardar los datos en localStorage
+        // Guardar los datos del usuario en localStorage
         localStorage.setItem("id_usuario", data._id);
         localStorage.setItem("nombre", data.nombre);
         localStorage.setItem("apellido", data.apellido);
@@ -34,6 +34,17 @@ const Lmod = () => {
         localStorage.setItem("email", data.email);
         localStorage.setItem("Usuario", data.Usuario); // Booleano del modelo
         localStorage.setItem("token", data.token); // Guardar el token en localStorage
+
+        // Obtener el id de la tienda del usuario
+        // const tiendaResponse = await fetch(
+        //   `${import.meta.env.VITE_BACKEND_URL}/usuario/tienda/${data._id}`
+        // );
+        // if (tiendaResponse.ok) {
+        //   const tiendaData = await tiendaResponse.json();
+        //   localStorage.setItem("id_tienda", tiendaData.tienda._id); // Guardar el id de la tienda en localStorage
+        // } else {
+        //   console.error("No se encontró la tienda para este usuario");
+        // }
 
         // Redirigir al usuario
         navigate("/home");
