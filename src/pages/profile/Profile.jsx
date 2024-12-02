@@ -50,7 +50,7 @@ const Profile = () => {
       }
 
       const response = await axios.put(
-        `${import.meta.env.VITE_BACKEND_URL}/usuario/${userId}`,
+        `${import.meta.env.VITE_BACKEND_URL}/propietario/perfil`,
         formData,
         { headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` } }
       );
