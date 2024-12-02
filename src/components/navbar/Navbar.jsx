@@ -22,13 +22,13 @@ const Navbar = () => {
                     <SearchIcon/> */}
                 </div>
                 <div className="items">
-                    <div className="item">
+                    {/* <div className="item">
                         <LanguageIcon className="icon"/>
                         Español
                     </div>
                     <div className="item">
                         <DarkModeOutlinedIcon className="icon" onClick={() => dispatch({ type: "TOGGLE" })}/>
-                    </div>
+                    </div> */}
                     {/* <div className="item">
                         <FullscreenExitIcon className="icon"/>
                     </div> */}
@@ -40,9 +40,9 @@ const Navbar = () => {
                         <ChatBubbleOutlineIcon className="icon"/>
                         <div className="counter">2</div>
                     </div> */}
-                    <div className="item">
+                    {/* <div className="item">
                         <ListIcon className="icon"/>
-                    </div>
+                    </div> */}
                     <div className="item">
                         <Link to="/profile" style={{ textDecoration: "none" }}> 
                             <img src="https://choicefineart.com/cdn/shop/products/portrait-series-bugs-bunny-983890.jpg?v=1688081893" alt="avatar" className="avatar"/>
