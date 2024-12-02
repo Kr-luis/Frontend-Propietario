@@ -21,7 +21,7 @@ export const Confirmartienda = () => {
                 confirmButtonText: 'Registrar Productos',
             }).then(() => {
                 // Redirigir después de hacer clic en el botón de confirmación
-                window.location.href = '/ingresar';
+                window.location.href = '/loginmod';
             });
         } catch (error) {
             // Mostrar SweetAlert2 para error

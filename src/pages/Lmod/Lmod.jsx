@@ -13,7 +13,7 @@ const Lmod = () => {
     e.preventDefault();
 
     try {
-      const url = `${import.meta.env.VITE_BACKEND_URL}/usuario/login`;
+      const url = `${import.meta.env.VITE_BACKEND_URL}/propietario/login`;
       const response = await fetch(url, {
         method: "POST",
         headers: {

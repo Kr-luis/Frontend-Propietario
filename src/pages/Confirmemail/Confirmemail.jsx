@@ -21,7 +21,7 @@ export const Confirmar = () => {
                 confirmButtonText: 'Iniciar sesión'
             }).then(() => {
                 // Redirigir después de hacer clic en el botón de confirmación
-                window.location.href = '/ingresar';
+                window.location.href = '/loginmod';
             });
         } catch (error) {
             // Usar SweetAlert2 para mostrar el mensaje de error
