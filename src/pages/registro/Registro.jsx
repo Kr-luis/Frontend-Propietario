@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './registro.scss';
-import Mensaje from '../../components/Alertas.jsx';
+import Swal from 'sweetalert2';
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 
@@ -42,7 +42,11 @@ export const Registrar = () => {
     e.preventDefault();
   
     if (!terminosAceptados) {
-      setMensaje({ respuesta: 'Debes aceptar los términos y condiciones.', tipo: false });
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Debes aceptar los términos y condiciones.',
+      });
       return;
     }
   
@@ -57,7 +61,11 @@ export const Registrar = () => {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
   
-      setMensaje({ respuesta: respuesta.data.msg, tipo: true });
+      Swal.fire({
+        icon: 'success',
+        title: 'Registro Exitoso',
+        text: respuesta.data.msg,
+      });
   
       // Limpia los campos tras un registro exitoso
       setForm({
@@ -73,11 +81,15 @@ export const Registrar = () => {
       setFile(null);
       setTerminosAceptados(false);
     } catch (error) {
-      setMensaje({ respuesta: error.response?.data?.msg || 'Error desconocido', tipo: false });
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: error.response?.data?.msg || 'Error desconocido',
+      });
     }
-  };
+  };  
   
-  
+
 
   const handleOpenModal = () => setOpenModal(true);
   const handleCloseModal = () => setOpenModal(false);
