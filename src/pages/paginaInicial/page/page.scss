@@ -1,0 +1,119 @@
+.page-container {
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  background-color: #1a1a1a;
+  padding: 20px;
+}
+
+.main-section {
+  text-align: center;
+  padding: 40px 0;
+
+  .title {
+    font-size: 2.5rem;
+    color: #9b4ddb;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #ccc;
+  }
+
+  .image-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #7a3cc7, #4c1e92);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.download-section,
+.terms-section,
+.about-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(123, 63, 204, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  .subtitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #9b4ddb;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #7a3cc7;
+    }
+  }
+
+  .link {
+    color: #9b4ddb;
+    text-decoration: underline;
+
+    &:hover {
+      color: #c39dda;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #4c1e92;
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    a {
+      margin: 0 10px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  p {
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+}

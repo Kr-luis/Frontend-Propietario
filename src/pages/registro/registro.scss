@@ -1,0 +1,176 @@
+// Variables
+$primary-color: #4c1e92;
+$secondary-color: #f3e5f5;
+$background-color: #fafafa;
+$text-color: #333;
+$border-color: #ddd;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; // Asegúrate de que ocupen toda la pantalla
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  font-family: 'Arial', sans-serif; // Define una fuente global
+  box-sizing: border-box; // Asegura que todos los elementos respeten sus tamaños
+}
+
+// Contenedor principal
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; // Cambiado a auto para que no ocupe toda la altura de la pantalla
+  padding: 2rem;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  font-family: "Arial", sans-serif;
+}
+
+// Título
+.register-title {
+  font-size: 2.5rem;
+  color: $primary-color;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+// Subtítulo
+.register-subtitle {
+  font-size: 1.2rem;
+  color: $text-color;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+// Formulario
+.register-form {
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  
+    label {
+      font-size: 0.9rem;
+      color: $text-color;
+      margin-bottom: 0.3rem; // Reducimos el margen entre el label y el input
+    }
+  
+    input {
+      padding: 0.4rem; // Reducimos el relleno interno del campo
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      font-size: 0.95rem; // Ajustamos el tamaño de la fuente para que sea más pequeño
+      box-shadow: none; // Eliminamos cualquier sombra que pueda hacer que se vean más gruesos
+  
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+    }
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
+}
+
+// Términos y condiciones
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  grid-column: span 2;
+  justify-content: center;
+
+  input[type="checkbox"] {
+    margin: 0;
+  }
+
+  label {
+    font-size: 0.9rem;
+    color: $text-color;
+
+    a {
+      color: $primary-color;
+      text-decoration: underline;
+
+      &:hover {
+        color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+// Botón de registro
+.register-button {
+  background: $primary-color;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  grid-column: span 2;
+  justify-self: center;
+
+  &:hover {
+    background: #581574; // Color más oscuro definido manualmente
+  }
+}
+
+// Enlace a ingresar
+.login-link {
+  font-size: 0.9rem;
+  color: $primary-color;
+  text-align: center;
+  margin-top: 1rem;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Estilos para la imagen de vista previa
+.left {
+  flex: 1;
+  text-align: center;
+
+  img {
+    max-width: 100%; // Limita el tamaño de la imagen para que no ocupe toda la pantalla
+    max-height: 250px; // Ajustamos el tamaño máximo de la imagen
+    object-fit: cover; // Asegura que la imagen mantenga su proporción sin distorsionarse
+    border-radius: 10px;
+    margin-bottom: 1rem; // Añadimos margen en la parte inferior
+    margin-top: 3rem;
+  }
+}
+
+// Formulario de entrada para la imagen
+.formInput {
+  width: 100%;
+  text-align: center;
+
+  label {
+    font-size: 1rem;
+    color: $primary-color;
+  }
+
+  input {
+    display: none;
+  }
+
+  .icon {
+    cursor: pointer;
+    color: $primary-color;
+  }
+}

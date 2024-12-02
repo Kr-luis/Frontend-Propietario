@@ -2,7 +2,7 @@ import './App.css';
 // import { PaginaInicial } from './pages/PaginaInicial.jsx';
 // import { Productos } from './pages/Productos.jsx';
 // import Ingresar from './pages/Ingresar.jsx';
-// import { Registrar } from './pages/Registrar.jsx';
+import { Registrar } from './pages/registro/Registro.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from '../context/AuthProvider';
 import Auth from './layout/Auth';
@@ -28,7 +28,7 @@ import { NoEncontrada } from './pages/NoEncontrada.jsx';
 // import CrearModerador from './pages/CrearModerador.jsx';
 // import Listartiendaadmin from './pages/Listatiendaadmin.jsx';
 // import TablaProductosAdmin from './components/TablaProductosAdmin.jsx';
-// import Listarproductosadmin from './pages/Listaproductosadmin.jsx';
+import PaginaInicial from "./pages/paginaInicial/Paginainicial.jsx"
 import Home from "./pages/Administrador/Home.jsx"
 import List from './pages/list/List.jsx';
 import Single from './pages/single/Single.jsx'
@@ -43,6 +43,8 @@ import NewU from './pages/newU/NewU.jsx'
 import Lmod from './pages/Lmod/Lmod.jsx';
 import Profile from './pages/profile/Profile.jsx';
 import ProfileU from './pages/profileU/profileU.jsx';
+import {Confirmar} from './pages/Confirmemail/Confirmemail.jsx';
+import { Confirmartienda } from './pages/Confirmtienda/confirmtienda.jsx';
 import { productInputs, userInputs, tiendaInputs, moderadorInputs } from "./formSource";
 import { useContext } from 'react';
 import { DarkModeContext } from './context/darkModeContext.jsx';
@@ -55,7 +57,7 @@ function App() {
       <BrowserRouter>
         <AuthProvider>
           <Routes>
-            <Route index element={<Lmod />} />
+            <Route index element={<PaginaInicial />} />
             <Route path="/" element={<Auth />}>
               {/* <Route path="ingresar" element={<Ingresar />} /> */}
               {/* <Route path="registrar" element={<Registrar />} />
@@ -82,7 +84,11 @@ function App() {
               <Route path="apk-download" element={<ApkDownload />} /> */}
               {/* <Route path="moderadores" element={<Moderadores />} /> */}
               <Route path="home" element={<Home />} />
+              <Route path="/propietario/confirmar/:token" element={<Confirmar />} />
+              <Route path="/propietario/confirmartienda/:tokentienda" element={<Confirmartienda />} />
               <Route path="login" element={<Login />} />
+              <Route path="registro" element={<Registrar />} />
+              <Route path="paginainicial" element={<PaginaInicial />} />
               <Route path="loginMod" element={<Lmod />} />
               <Route path="profile" element={<Profile modId={localStorage.getItem("id_usuario")} />} />
               <Route path="tiendas">
