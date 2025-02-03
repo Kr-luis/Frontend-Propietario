@@ -1,47 +1,75 @@
+# SISTEMA DE BÚSQUEDA DE PRODUCTOS GAMER EN QUITO - **QUITOTECH**
 
+## 📌 Descripción
 
-# SISTEMA DE BÚSQUEDA DE PRODUCTOS GAMER EN QUITO "QUITOTECH"
+**QuitoTech** es una aplicación web diseñada para facilitar la publicación y búsqueda de artículos gamer en diferentes tiendas de la ciudad de Quito.
 
+## 🚀 Tecnologías Utilizadas
 
-## Descripcion
+El proyecto utiliza las siguientes herramientas, librerías y frameworks:
 
-El presente repositorio aloja el proyecto realizado para una aplicacion web que ayude a la publicacion de articulos gamer a diferentes tiendas en la ciudad de Quito
+- **Frontend:**
+  - React
+  - Tailwind CSS
+  - React Icons
+- **Entorno de desarrollo:**
+  - Visual Studio Code
+  - Git & GitHub
+  - Node.js
 
+## 🌐 Demo y Documentación
 
-## 🛠 Herramientas, librerías y frameworks
+- **📢 Deploy del frontend:** [QuitoTech - Frontend](https://frontend-propietario.onrender.com)
+- **📖 Manual de usuario:** [Ver en YouTube](https://youtu.be/2zRKkX10ldg)
 
-- React
-- Tailwind CSS
-- React Icons
-- Visual Studio Code
-- Git
-- Github
-## 📌 Deploy del componente frontend
+## ⚙️ Instalación y Configuración
 
-frontend-propietario.onrender.com
+### 📋 Requisitos previos
+Antes de instalar el proyecto, asegúrese de contar con los siguientes requisitos:
 
+- [Node.js](https://nodejs.org/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Git](https://git-scm.com/)
 
-## 📖 Manual de usuario
-https://youtu.be/2zRKkX10ldg
-## ✏ Pasos para instalacion
+### 🛠 Pasos para la instalación
 
-- Requisitos
-Node    
-Visual studio code  
-Git
-
-1. Clonar el repositorio
+1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/Kr-luis/Frontend-Propietario
-
-2. Ingresar a Visual studio code o su IDE predeterminado e ingresar el comando en la terminal
+   git clone https://github.com/Kr-luis/Frontend-Propietario.git
+   ```
+2. **Acceder al proyecto:**
    ```bash
-   npm i
-
-3. Configurar las variables de entorno en el archivo .env
+   cd Frontend-Propietario
+   ```
+3. **Instalar dependencias:**
    ```bash
-   VITE_BACKEND_URL = your keys
-
-4. Iniciar el proyecto con el comando
+   npm install
+   ```
+4. **Configurar variables de entorno:**
+   En el archivo `.env`, agregue la siguiente configuración:
+   ```plaintext
+   VITE_BACKEND_URL=your_backend_url
+   ```
+5. **Iniciar el proyecto en modo desarrollo:**
    ```bash
    npm run dev
+   ```
+
+## 📜 Estructura del Proyecto
+
+```plaintext
+Frontend-Propietario/
+│── src/
+│   ├── components/       # Componentes reutilizables
+│   ├── pages/            # Páginas principales
+│   ├── assets/           # Recursos estáticos
+│   ├── context/          # Context API
+│   ├── style/            # Estilos del proyecto
+│── public/               # Archivos estáticos
+│── .env                  # Ejemplo de archivo de configuración
+│── package.json          # Dependencias y scripts
+│── README.md             # Documentación del proyecto
+```
+
+
+
